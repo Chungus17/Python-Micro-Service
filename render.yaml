@@ -1,6 +1,10 @@
 services:
   - type: web
-    name: flask-microservice
+    name: your-microservice-name
     env: python
-    buildCommand: ""
+    plan: free
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
