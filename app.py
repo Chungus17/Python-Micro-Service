@@ -69,7 +69,8 @@ def getFareData(pickup_lat, pickup_lng, template):
                 distance = response_json['data']['distance']
                 # Append results
                 results.append({
-                    'Areas': nhood_name,
+                    'Area': nhood_name,
+                    'Block': block_number,
                     'Estimated Fare': estimated_fare,
                     'Distance (meters)': distance
                 })
@@ -77,7 +78,8 @@ def getFareData(pickup_lat, pickup_lng, template):
             else:
                 print(f"Error for {nhood_name}: {response_json.get('message')}")
                 results.append({
-                    'Areas': nhood_name,
+                    'Area': nhood_name,
+                    'Block': block_number,
                     'Estimated Fare': None,
                     'Distance (meters)': None
                 })
