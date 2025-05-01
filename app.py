@@ -189,6 +189,11 @@ def get_hourly_orders():
     data = getHourlyOrders(start_date, end_date, filter_by)
 
     print(data)
+    
+    return jsonify({
+        "message": "Yooooo congrats bro your micro service is actually working 😂"
+    })
+
 
 
 # !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
