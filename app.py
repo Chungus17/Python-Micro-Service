@@ -9,17 +9,24 @@ from postmarker.core import PostmarkClient
 import os
 import threading
 import openpyxl
+import requests
 
 app = Flask(__name__)
 CORS(app)  
 
 MY_API_KEY = os.environ.get("MY_API_KEY")
 FM_TOKEN = os.environ.get("FM_TOKEN")
+VERDI_URL = os.environ.get("VERDI_URL")
 API_URL = "https://api.tookanapp.com/v2/get_fare_estimate"
 
 POSTMARK_TOKEN = os.environ.get("POSTMARK_TOKEN")
 senderEmail = "Support@tryverdi.com"
 recipientEmail = "mrharoonkhan11@gmail.com"
+
+
+#!------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#* --------------------------------------------FARE from 1 BRANCH to ALL AREAS of Kuwait----------------------------------------------------------------------------
+
 
 def getFareData(pickup_lat, pickup_lng, template):
 
@@ -134,9 +141,9 @@ def fareAndEmail(pickup_lat, pickup_lng, template, clientName):
     results = getFareData(pickup_lat, pickup_lng, template)
     sendEmail(results, clientName)
 
-
+# TODO: Endpoint for getting fares from the branch to all areas of Kuwait
 @app.route('/get_all_fare', methods=['POST'])
-def home():
+def get_all_fare():
     data = request.get_json()
 
     pickup_lat = data.get('pickup_lat')
@@ -151,7 +158,40 @@ def home():
     return jsonify({
         "message": "Yooooo congrats bro your micro service is actually working 😂"
     })
-    
+
+
+# !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+#* -----------------------------------------NUMBER of ORDERS / HOUR (ALL or SPECIFIC CLIENT)------------------------------------------------------------------------
+
+
+def getHourlyOrders(start_date, end_date, filter_by):
+    apiURL = f"{VERDI_URL}user_id={filter_by}&start_date={start_date}&end_date={end_date}"
+    response = requests.get(url=apiURL)
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        return f"Error: {response.status_code}, {response.text}"
+
+# TODO: Endpoint for getting NUMBER OF ORDERS PER HOUR (Specific client or all clients)
+@app.route('/get_hourly_orders', methods=["POST"])
+def get_hourly_orders():
+
+    # data = request.get_json()
+    # start_date = data.get('start_date')
+    # end_date = data.get('end_date')
+    # filter_by = data.get('filter_by')
+    start_date = "2025-04-01"
+    end_date = "2025-04-02"
+    filter_by = "all"
+    data = getHourlyOrders(start_date, end_date, filter_by)
+
+    print(data)
+
+
+# !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False)
