@@ -407,7 +407,7 @@ def get_Total_Fare(data, clientName):
 
     workbook.save(output_filename)
 
-    send_email(output_filename, subject="Average Fare", clientName=clientName)
+    send_email(output_filename, subject="Total Fare", clientName=clientName)
 
 def get_Amount_Ranges(data, clientName):
     return
