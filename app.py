@@ -76,7 +76,7 @@ def send_email(excel_file, subject, clientName):
             HtmlBody="<strong>Please find the attached Excel file.</strong>",
             Attachments=[
                 {
-                    "Name": f"{clientName} fare estimate.xlsx",
+                    "Name": f"{clientName} {excel_file}",
                     "Content": encoded_excel,
                     "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 }
@@ -299,7 +299,7 @@ def get_Hourly_Orders(data, clientName):
     send_email(excel_file, subject="Hourly orders", clientName=clientName)
 
 def get_Average_Fare(data, clientName):
-    output_filename = f"{clientName} Average Fare.xlsx"
+    output_filename = f"Average Fare.xlsx"
 
     # Step 1: Group absolute amounts by user_name
     user_amounts = defaultdict(list)
@@ -342,9 +342,18 @@ def get_Average_Fare(data, clientName):
 
     send_email(output_filename, subject="Average Fare", clientName=clientName)
     
-
 def get_Number_Of_Orders(data, clientName):
-    return
+    # Create a DataFrame
+    df = pd.DataFrame(data)
+
+    # Count the number of orders per user_name
+    order_counts = df['user_name'].value_counts().reset_index()
+    order_counts.columns = ['User Name', 'Number of Orders']
+
+    # Export to Excel
+    order_counts.to_excel('user_order_counts.xlsx', index=False)
+
+    send_email("Total number of orders.xlsx", subject="Number of orders", clientName=clientName)
 
 def get_Total_Fare(data, clientName):
     return
