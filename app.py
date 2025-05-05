@@ -343,6 +343,8 @@ def get_Average_Fare(data, clientName):
     send_email(output_filename, subject="Average Fare", clientName=clientName)
     
 def get_Number_Of_Orders(data, clientName):
+
+    output_file_name = "Total number of orders.xlsx"
     # Create a DataFrame
     df = pd.DataFrame(data)
 
@@ -351,9 +353,9 @@ def get_Number_Of_Orders(data, clientName):
     order_counts.columns = ['User Name', 'Number of Orders']
 
     # Export to Excel
-    order_counts.to_excel('user_order_counts.xlsx', index=False)
+    order_counts.to_excel(output_file_name, index=False)
 
-    send_email("Total number of orders.xlsx", subject="Number of orders", clientName=clientName)
+    send_email(output_file_name, subject="Number of orders", clientName=clientName)
 
 def get_Total_Fare(data, clientName):
     return
