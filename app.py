@@ -39,13 +39,25 @@ def getData(start_date, end_date, filter_by, clientName, task_function):
         try:
             data = response.json()
             if task_function == "hourly orders":
-                getHourlyOrders(data, clientName)
+                get_Hourly_Orders(data, clientName)
+            elif task_function == "average fare":
+                get_Average_Fare(data, clientName)
+            elif task_function == "number of orders":
+                get_Number_Of_Orders(data, clientName)
+            elif task_function == "total fare":
+                get_Total_Fare(data, clientName)
+            elif task_function == "amount ranges":
+                get_Amount_Ranges(data, clientName)
+            elif task_function == "pickup counts":
+                get_Pickup_Counts_Per_Area(data, clientName)
+            else:
+                return jsonify({
+                    "message": "Wrong function called 😂"
+                })
         except ValueError as e:
             return("Failed to parse JSON. Raw response was:")
     else:
         return(f"Request failed with status code {response.status_code}")
-    
-
 
 def send_email(excel_file, subject, clientName):
     try:
@@ -73,6 +85,9 @@ def send_email(excel_file, subject, clientName):
 
     except Exception as e:
         print(f"Error sending email: {str(e)}")
+
+
+
 
 #!------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #*---------------------------------------------FARE from 1 BRANCH to ALL AREAS of Kuwait----------------------------------------------------------------------------
@@ -211,9 +226,30 @@ def get_all_fare():
 
 
 # !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-#* -----------------------------------------NUMBER of ORDERS / HOUR (ALL or SPECIFIC CLIENT)------------------------------------------------------------------------
+#* ---------------------------------------------------DATA ANALYSIS ENDPOINT----------------------------------------------------------------------------------------
 
-def getHourlyOrders(data, clientName):
+# TODO: Endpoint for getting NUMBER OF ORDERS PER HOUR (Specific client or all clients)
+@app.route('/data_analysis', methods=["POST"])
+def data_analysis():
+
+    params_data = request.get_json()
+    start_date = params_data.get('start_date')
+    end_date = params_data.get('end_date')
+    filter_by = params_data.get('filter_by')
+    clientName = params_data.get('clientName')
+    task_function = params_data.get('task_function')
+
+    thread = threading.Thread(target=getData, args=(start_date, end_date, filter_by, clientName, task_function))
+    thread.start()
+
+    return jsonify({
+        "message": "Yooooo congrats bro your micro service is actually working 😂"
+    })
+
+
+# !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+#* -----------------------------------------------ALL FUNCTIONS FOR DATA ANALYSIS-----------------------------------------------------------------------------------
+def get_Hourly_Orders(data, clientName):
     # Step 1: Prepare a nested dictionary {user_name: {hour: count}}
     order_counts = defaultdict(lambda: defaultdict(int))
 
@@ -262,33 +298,60 @@ def getHourlyOrders(data, clientName):
 
     send_email(excel_file, subject="Hourly orders", clientName=clientName)
 
-    
-# TODO: Endpoint for getting NUMBER OF ORDERS PER HOUR (Specific client or all clients)
-@app.route('/get_hourly_orders', methods=["POST"])
-def get_hourly_orders():
+def get_Average_Fare(data, clientName):
+    output_filename = f"{clientName} Average Fare.xlsx"
 
-    params_data = request.get_json()
-    start_date = params_data.get('start_date')
-    end_date = params_data.get('end_date')
-    filter_by = params_data.get('filter_by')
-    clientName = params_data.get('clientName')
-    task_function = params_data.get('task_function')
-    # start_date = "2025-04-01"
-    # end_date = "2025-04-02"
-    # filter_by = "all"
+    # Step 1: Group absolute amounts by user_name
+    user_amounts = defaultdict(list)
 
-    thread = threading.Thread(target=getData, args=(start_date, end_date, filter_by, clientName, task_function))
-    thread.start()
+    for entry in data:
+            user = entry.get('user_name')
+            amount_str = entry.get('amount', '0')
+            try:
+                amount = abs(float(amount_str))
+                user_amounts[user].append(amount)
+            except ValueError:
+                print(f"Skipping invalid amount for user {user}: {amount_str}")
+                continue
 
-    return jsonify({
-        "message": "Yooooo congrats bro your micro service is actually working 😂"
-    })
+        # Step 2: Compute averages
+    final_data = []
+    for user, amounts in user_amounts.items():
+            total = sum(amounts)
+            avg = sum(amounts) / len(amounts) if amounts else 0
+            final_data.append({
+                "User Name": user,
+                "Average Fare": round(avg, 2)
+            })
 
 
-# !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-#* -----------------------------------------------AVERAGE FARE (ALL or SPECIFIC CLIENT)-----------------------------------------------------------------------------
+        # Step 3: Create DataFrame
+    df = pd.DataFrame(final_data)
 
+        # Step 4: Save to Excel
+    df.to_excel(output_filename, index=False)
 
+        # Step 5: Adjust column widths
+    workbook = load_workbook(output_filename)
+    sheet = workbook.active
+
+    sheet.column_dimensions[get_column_letter(1)].width = 25  # User_Name
+    sheet.column_dimensions[get_column_letter(2)].width = 18  # Average_Amount
+
+    workbook.save(output_filename)
+    print(f"Excel file '{output_filename}' generated successfully.")
+
+def get_Number_Of_Orders(data, clientName):
+    return
+
+def get_Total_Fare(data, clientName):
+    return
+
+def get_Amount_Ranges(data, clientName):
+    return
+
+def get_Pickup_Counts_Per_Area(data, clientName):
+    return
 # !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
