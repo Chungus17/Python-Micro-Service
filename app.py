@@ -26,7 +26,7 @@ POSTMARK_TOKEN = os.environ.get("POSTMARK_TOKEN")
 senderEmail = "Support@tryverdi.com"
 recipientEmail = "mrharoonkhan11@gmail.com"
 
-def getData(start_date, end_date, filter_by):
+def getData(start_date, end_date, filter_by, clientName, task_function):
     apiURL = f"https://tryverdi.com/api/transaction_data?user_id={filter_by}&start_date={start_date}&end_date={end_date}"
 
     headers = {
@@ -38,11 +38,14 @@ def getData(start_date, end_date, filter_by):
     if response.status_code == 200:
         try:
             data = response.json()
-            return data
+            if task_function == "hourly orders":
+                getHourlyOrders(data, clientName)
         except ValueError as e:
             return("Failed to parse JSON. Raw response was:")
     else:
         return(f"Request failed with status code {response.status_code}")
+    
+
 
 def send_email(excel_file, subject, clientName):
     try:
@@ -269,13 +272,13 @@ def get_hourly_orders():
     end_date = params_data.get('end_date')
     filter_by = params_data.get('filter_by')
     clientName = params_data.get('clientName')
+    task_function = params_data.get('task_function')
     # start_date = "2025-04-01"
     # end_date = "2025-04-02"
     # filter_by = "all"
 
-    data = getData(start_date, end_date, filter_by)
-
-    getHourlyOrders(data, clientName)
+    thread = threading.Thread(target=getData, args=(start_date, end_date, filter_by, clientName, task_function))
+    thread.start()
 
     return jsonify({
         "message": "Yooooo congrats bro your micro service is actually working 😂"
