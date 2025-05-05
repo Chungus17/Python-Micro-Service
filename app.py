@@ -339,7 +339,9 @@ def get_Average_Fare(data, clientName):
     sheet.column_dimensions[get_column_letter(2)].width = 18  # Average_Amount
 
     workbook.save(output_filename)
-    print(f"Excel file '{output_filename}' generated successfully.")
+
+    send_email(output_filename, subject="Average Fare", clientName=clientName)
+    
 
 def get_Number_Of_Orders(data, clientName):
     return
