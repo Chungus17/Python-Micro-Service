@@ -355,10 +355,59 @@ def get_Number_Of_Orders(data, clientName):
     # Export to Excel
     order_counts.to_excel(output_file_name, index=False)
 
+        # Step 5: Adjust column widths
+    workbook = load_workbook(output_file_name)
+    sheet = workbook.active
+
+    sheet.column_dimensions[get_column_letter(1)].width = 25  # User_Name
+    sheet.column_dimensions[get_column_letter(2)].width = 15  # Average_Amount
+
+    workbook.save(output_file_name)
+
     send_email(output_file_name, subject="Number of orders", clientName=clientName)
 
 def get_Total_Fare(data, clientName):
-    return
+    output_filename = f"Total Fare.xlsx"
+
+    # Step 1: Group absolute amounts by user_name
+    user_amounts = defaultdict(list)
+
+    for entry in data:
+            user = entry.get('user_name')
+            amount_str = entry.get('amount', '0')
+            try:
+                amount = abs(float(amount_str))
+                user_amounts[user].append(amount)
+            except ValueError:
+                print(f"Skipping invalid amount for user {user}: {amount_str}")
+                continue
+
+        # Step 2: Compute averages
+    final_data = []
+    for user, amounts in user_amounts.items():
+            total = sum(amounts) if amounts else 0
+            final_data.append({
+                "User Name": user,
+                "Total Fare": round(total, 2)
+            })
+
+
+    # Step 3: Create DataFrame
+    df = pd.DataFrame(final_data)
+
+    # Step 4: Save to Excel
+    df.to_excel(output_filename, index=False)
+
+    # Step 5: Adjust column widths
+    workbook = load_workbook(output_filename)
+    sheet = workbook.active
+
+    sheet.column_dimensions[get_column_letter(1)].width = 25  # User_Name
+    sheet.column_dimensions[get_column_letter(2)].width = 18  # Average_Amount
+
+    workbook.save(output_filename)
+
+    send_email(output_filename, subject="Average Fare", clientName=clientName)
 
 def get_Amount_Ranges(data, clientName):
     return
