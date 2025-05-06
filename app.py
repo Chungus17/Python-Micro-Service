@@ -206,6 +206,7 @@ def fareAndEmail(pickup_lat, pickup_lng, template, clientName):
     results = getFareData(pickup_lat, pickup_lng, template)
     sendEmail(results, clientName)
 
+
 # TODO: Endpoint for getting fares from the branch to all areas of Kuwait
 @app.route('/get_all_fare', methods=['POST'])
 def get_all_fare():
@@ -410,7 +411,46 @@ def get_Total_Fare(data, clientName):
     send_email(output_filename, subject="Total Fare", clientName=clientName)
 
 def get_Amount_Ranges(data, clientName):
-    return
+
+    output_file_name = "Orders in fare ranges.xlsx"
+
+    # Define range intervals
+    step = 0.25
+    range_limits = [(round(start, 2), round(start + step, 2)) for start in [1 + i * step for i in range(8)]]  
+    range_labels = [f"{lo}-{hi}" for lo, hi in range_limits]
+
+    # Prepare data storage
+    user_range_counts = defaultdict(lambda: defaultdict(int))
+
+    # Process each record
+    for record in data:
+        user = record['user_name']
+        amount = abs(float(record['amount']))
+        for lo, hi in range_limits:
+            if lo <= amount < hi:
+                label = f"{lo}-{hi}"
+                user_range_counts[user][label] += 1
+                break
+
+    # Convert to DataFrame
+    output_rows = []
+    for user, counts in user_range_counts.items():
+        row = {'user_name': user}
+        for label in range_labels:
+            row[label] = counts.get(label, 0)
+        output_rows.append(row)
+
+    df = pd.DataFrame(output_rows)
+    df.to_excel(output_file_name, index=False)
+    # Step 5: Adjust column widths
+    workbook = load_workbook(output_file_name)    
+    sheet = workbook.active
+
+    sheet.column_dimensions[get_column_letter(1)].width = 25  # User_Name
+    # Save the updated workbook
+    workbook.save(output_file_name)
+
+    send_email(output_file_name, subject="Total orders in fare ranges", clientName=clientName)
 
 def get_Pickup_Counts_Per_Area(data, clientName):
     return
