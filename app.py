@@ -453,7 +453,82 @@ def get_Amount_Ranges(data, clientName):
     send_email(output_file_name, subject="Total orders in fare ranges", clientName=clientName)
 
 def get_Pickup_Counts_Per_Area(data, clientName):
-    return
+
+    output_filename = "Pickups per area per hour.xlsx"
+
+    # Load JSON data from file
+    with open('areas.json', 'r', encoding='utf-8') as file:
+        neighborhood_data = json.load(file)
+
+    # Build a mapping of each alias → canonical name
+    area_alias_map = {}
+    for item in neighborhood_data:
+        if 'neighborhoodenglish' in item:
+            aliases = [alias.strip() for alias in item['neighborhoodenglish'].split(',')]
+            if aliases:
+                canonical = aliases[0]
+                for alias in aliases:
+                    area_alias_map[alias.lower()] = canonical
+
+    # Area extraction function
+    def extract_area_simple(address, alias_map):
+        if not address:
+            return "Unknown"
+        address_lower = address.lower()
+        for alias in alias_map:
+            if alias in address_lower:
+                return alias_map[alias]
+        return "Unknown"
+
+    # Enrich each object with extracted areas
+    for item in data:
+        pickup_address = item.get('pickup_task', {}).get('address')
+        delivery_address = item.get('delivery_task', {}).get('address')
+
+        item['pickup_area'] = extract_area_simple(pickup_address, area_alias_map)
+        item['delivery_area'] = extract_area_simple(delivery_address, area_alias_map)
+
+    # Initialize a nested dictionary to store area → hour → count
+    area_hour_count = {}
+
+    for item in data:
+        area = item.get('pickup_area', 'Unknown')
+        timestamp = item.get('created_at', '')
+
+        try:
+            dt = datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
+            hour = dt.hour
+        except:
+            continue
+
+        if area not in area_hour_count:
+            area_hour_count[area] = [0] * 24
+
+        area_hour_count[area][hour] += 1
+
+    # Prepare rows and sort by area name
+    rows = []
+    for area, hours in sorted(area_hour_count.items()):
+        total = sum(hours)
+        row = [area] + hours + [total]
+        rows.append(row)
+
+    columns = ['Pickup Area'] + [f"{i}-{i+1}" for i in range(24)] + ['Total']
+
+    # Create DataFrame and save to Excel
+    df = pd.DataFrame(rows, columns=columns)
+    excel_path = output_filename
+    df.to_excel(excel_path, index=False)
+
+    # Adjust the first column width
+    wb = load_workbook(excel_path)
+    ws = wb.active
+    ws.column_dimensions[get_column_letter(1)].width = 30  # Wider first column
+    wb.save(excel_path)
+
+    send_email(output_filename, subject="Pickups per area in every hour", clientName=clientName)
+
+
 # !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

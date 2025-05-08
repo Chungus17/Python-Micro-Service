@@ -1,0 +1,1334 @@
+[
+    {
+        "nhood_no": 207,
+        "neighborhoodenglish": "Salmiya,Dalal Mall",
+        "centroid_x": 48.067859,
+        "centroid_y": 29.334745
+    },
+    {
+        "nhood_no": 102,
+        "neighborhoodenglish": "Sharq,Alsawaber,KIPCO,Kuwait City,Al Kuwayt,Jibla,Al-Salhiya,Salhiya,مدينة الكويت",
+        "centroid_x": 47.986688,
+        "centroid_y": 29.381162
+    },
+    {
+        "nhood_no": 409,
+        "neighborhoodenglish": "Abdally",
+        "centroid_x": 47.78979,
+        "centroid_y": 29.989199
+    },
+    {
+        "nhood_no": 110,
+        "neighborhoodenglish": "Abdulla Al-Salem,Abdullah al-Salem",
+        "centroid_x": 47.981883,
+        "centroid_y": 29.352209
+    },
+    {
+        "nhood_no": 438,
+        "neighborhoodenglish": "Abdullah Mubarak Al-Sabah",
+        "centroid_x": 47.903858,
+        "centroid_y": 29.239804
+    },
+    {
+        "nhood_no": 326,
+        "neighborhoodenglish": "Abu Ftaira,Abu Hasaniya,ِAbu Fatira,Abu Fatira,Abuhasani,Abu hasani,Mall 30, Mall30",
+        "centroid_x": 48.104298,
+        "centroid_y": 29.197463
+    },
+    {
+        "nhood_no": 307,
+        "neighborhoodenglish": "Abu Halifa,Alfa Gas Station",
+        "centroid_x": 48.125232,
+        "centroid_y": 29.128363
+    },
+    {
+        "nhood_no": 202,
+        "neighborhoodenglish": "Adailiya",
+        "centroid_x": 47.981873,
+        "centroid_y": 29.326203
+    },
+    {
+        "nhood_no": 321,
+        "neighborhoodenglish": "Ahmadi Governorate Desert",
+        "centroid_x": 47.91658,
+        "centroid_y": 28.86244
+    },
+    {
+        "nhood_no": 233,
+        "neighborhoodenglish": "Airport",
+        "centroid_x": 47.971755,
+        "centroid_y": 29.217808
+    },
+    {
+        "nhood_no": 231,
+        "neighborhoodenglish": "Al Bida'a,albidaa",
+        "centroid_x": 48.088824,
+        "centroid_y": 29.31573
+    },
+    {
+        "nhood_no": 206,
+        "neighborhoodenglish": "Al Masayel,Messila",
+        "centroid_x": 48.091584,
+        "centroid_y": 29.244089
+    },
+    {
+        "nhood_no": 412,
+        "neighborhoodenglish": "Al Mutlaa",
+        "centroid_x": 47.547392,
+        "centroid_y": 29.489829
+    },
+    {
+        "nhood_no": 461,
+        "neighborhoodenglish": "Al Mutlaa Residential 1",
+        "centroid_x": 47.625485,
+        "centroid_y": 29.52625
+    },
+    {
+        "nhood_no": 470,
+        "neighborhoodenglish": "Al Mutlaa Residential 10",
+        "centroid_x": 47.559071,
+        "centroid_y": 29.444771
+    },
+    {
+        "nhood_no": 471,
+        "neighborhoodenglish": "Al Mutlaa Residential 11",
+        "centroid_x": 47.579363,
+        "centroid_y": 29.44415
+    },
+    {
+        "nhood_no": 472,
+        "neighborhoodenglish": "Al Mutlaa Residential 12",
+        "centroid_x": 47.584991,
+        "centroid_y": 29.41554
+    },
+    {
+        "nhood_no": 462,
+        "neighborhoodenglish": "Al Mutlaa Residential 2",
+        "centroid_x": 47.625924,
+        "centroid_y": 29.50832
+    },
+    {
+        "nhood_no": 463,
+        "neighborhoodenglish": "Al Mutlaa Residential 3",
+        "centroid_x": 47.625558,
+        "centroid_y": 29.488047
+    },
+    {
+        "nhood_no": 464,
+        "neighborhoodenglish": "Al Mutlaa Residential 4",
+        "centroid_x": 47.606476,
+        "centroid_y": 29.493577
+    },
+    {
+        "nhood_no": 465,
+        "neighborhoodenglish": "Al Mutlaa Residential 5",
+        "centroid_x": 47.599413,
+        "centroid_y": 29.478278
+    },
+    {
+        "nhood_no": 466,
+        "neighborhoodenglish": "Al Mutlaa Residential 6",
+        "centroid_x": 47.579503,
+        "centroid_y": 29.480184
+    },
+    {
+        "nhood_no": 467,
+        "neighborhoodenglish": "Al Mutlaa Residential 7",
+        "centroid_x": 47.55949,
+        "centroid_y": 29.480401
+    },
+    {
+        "nhood_no": 468,
+        "neighborhoodenglish": "Al Mutlaa Residential 8",
+        "centroid_x": 47.559301,
+        "centroid_y": 29.462508
+    },
+    {
+        "nhood_no": 469,
+        "neighborhoodenglish": "Al Mutlaa Residential 9",
+        "centroid_x": 47.580162,
+        "centroid_y": 29.462185
+    },
+    {
+        "nhood_no": 421,
+        "neighborhoodenglish": "Al Sheqaya",
+        "centroid_x": 47.139001,
+        "centroid_y": 29.198882
+    },
+    {
+        "nhood_no": 104,
+        "neighborhoodenglish": "Al Sour Gardens",
+        "centroid_x": 47.982678,
+        "centroid_y": 29.363456
+    },
+    {
+        "nhood_no": 459,
+        "neighborhoodenglish": "Al shadadyia Industrial",
+        "centroid_x": 47.856695,
+        "centroid_y": 29.180309
+    },
+    {
+        "nhood_no": 248,
+        "neighborhoodenglish": "Al-Adan",
+        "centroid_x": 48.068209,
+        "centroid_y": 29.232342
+    },
+    {
+        "nhood_no": 305,
+        "neighborhoodenglish": "Al-Fintas",
+        "centroid_x": 48.118522,
+        "centroid_y": 29.17062
+    },
+    {
+        "nhood_no": 430,
+        "neighborhoodenglish": "Al-Fnaitees,Fnaitees",
+        "centroid_x": 48.095513,
+        "centroid_y": 29.220487
+    },
+    {
+        "nhood_no": 329,
+        "neighborhoodenglish": "Al-Nuwaiseeb",
+        "centroid_x": 48.377379,
+        "centroid_y": 28.572696
+    },
+    {
+        "nhood_no": 250,
+        "neighborhoodenglish": "Al-Qurain,Qurain",
+        "centroid_x": 48.076128,
+        "centroid_y": 29.202306
+    },
+    {
+        "nhood_no": 249,
+        "neighborhoodenglish": "Al-Qusour",
+        "centroid_x": 48.073187,
+        "centroid_y": 29.215271
+    },
+    {
+        "nhood_no": 236,
+        "neighborhoodenglish": "Al-Siddiq,siddiq",
+        "centroid_x": 47.992026,
+        "centroid_y": 29.295222
+    },
+    {
+        "nhood_no": 406,
+        "neighborhoodenglish": "Al-Sikrab",
+        "centroid_x": 47.770525,
+        "centroid_y": 29.299904
+    },
+    {
+        "nhood_no": 312,
+        "neighborhoodenglish": "Ali Subah Al-Salem",
+        "centroid_x": 48.152889,
+        "centroid_y": 28.957339
+    },
+    {
+        "nhood_no": 410,
+        "neighborhoodenglish": "Amghara Industrial",
+        "centroid_x": 47.746281,
+        "centroid_y": 29.308597
+    },
+    {
+        "nhood_no": 225,
+        "neighborhoodenglish": "Andalus",
+        "centroid_x": 47.883005,
+        "centroid_y": 29.303041
+    },
+    {
+        "nhood_no": 226,
+        "neighborhoodenglish": "Ardhiya,Ardiya,The Walk Mall",
+        "centroid_x": 47.894141,
+        "centroid_y": 29.288126
+    },
+    {
+        "nhood_no": 445,
+        "neighborhoodenglish": "Ardhiya Herafiya",
+        "centroid_x": 47.91085,
+        "centroid_y": 29.294054
+    },
+    {
+        "nhood_no": 244,
+        "neighborhoodenglish": "Ardhiya Stores",
+        "centroid_x": 47.922064,
+        "centroid_y": 29.29421
+    },
+    {
+        "nhood_no": 242,
+        "neighborhoodenglish": "Ardiya Government",
+        "centroid_x": 47.916947,
+        "centroid_y": 29.278421
+    },
+    {
+        "nhood_no": 243,
+        "neighborhoodenglish": "Ashbeliah",
+        "centroid_x": 47.938613,
+        "centroid_y": 29.273177
+    },
+    {
+        "nhood_no": 124,
+        "neighborhoodenglish": "Auha Island",
+        "centroid_x": 48.439939,
+        "centroid_y": 29.377225
+    },
+    {
+        "nhood_no": 418,
+        "neighborhoodenglish": "Bar Al-Jahra Governorate",
+        "centroid_x": 47.365373,
+        "centroid_y": 29.634267
+    },
+    {
+        "nhood_no": 213,
+        "neighborhoodenglish": "Bayan",
+        "centroid_x": 48.04555,
+        "centroid_y": 29.298442
+    },
+    {
+        "nhood_no": 442,
+        "neighborhoodenglish": "Bhaith",
+        "centroid_x": 47.960976,
+        "centroid_y": 29.953314
+    },
+    {
+        "nhood_no": 108,
+        "neighborhoodenglish": "Bnaid Al-Qar,Bneid Al Gar, Bnied AlGar",
+        "centroid_x": 48.003311,
+        "centroid_y": 29.374065
+    },
+    {
+        "nhood_no": 122,
+        "neighborhoodenglish": "Bubyan Island",
+        "centroid_x": 48.211906,
+        "centroid_y": 29.785347
+    },
+    {
+        "nhood_no": 112,
+        "neighborhoodenglish": "Daiya",
+        "centroid_x": 48.014211,
+        "centroid_y": 29.359877
+    },
+    {
+        "nhood_no": 246,
+        "neighborhoodenglish": "Dajeej,Sky Mall",
+        "centroid_x": 47.962204,
+        "centroid_y": 29.262004
+    },
+    {
+        "nhood_no": 107,
+        "neighborhoodenglish": "Dasma",
+        "centroid_x": 48.001304,
+        "centroid_y": 29.365208
+    },
+    {
+        "nhood_no": 101,
+        "neighborhoodenglish": "Dasman",
+        "centroid_x": 47.998553,
+        "centroid_y": 29.386149
+    },
+    {
+        "nhood_no": 316,
+        "neighborhoodenglish": "Dhaher,Daher",
+        "centroid_x": 48.066935,
+        "centroid_y": 29.164237
+    },
+    {
+        "nhood_no": 401,
+        "neighborhoodenglish": "Doha Residential",
+        "centroid_x": 47.802961,
+        "centroid_y": 29.318953
+    },
+    {
+        "nhood_no": 314,
+        "neighborhoodenglish": "East Ahmadi",
+        "centroid_x": 48.088329,
+        "centroid_y": 29.078951
+    },
+    {
+        "nhood_no": 492,
+        "neighborhoodenglish": "East Sabah Al-Ahmad",
+        "centroid_x": 48.100798,
+        "centroid_y": 28.772164
+    },
+    {
+        "nhood_no": 301,
+        "neighborhoodenglish": "Egaila,Agaila,Eqaila,104 Rd",
+        "centroid_x": 48.102437,
+        "centroid_y": 29.171017
+    },
+    {
+        "nhood_no": 439,
+        "neighborhoodenglish": "Fahad Al-Ahmad",
+        "centroid_x": 48.105356,
+        "centroid_y": 29.127598
+    },
+    {
+        "nhood_no": 310,
+        "neighborhoodenglish": "Fahaheel",
+        "centroid_x": 48.128527,
+        "centroid_y": 29.08046
+    },
+    {
+        "nhood_no": 113,
+        "neighborhoodenglish": "Faiha",
+        "centroid_x": 47.978633,
+        "centroid_y": 29.338369
+    },
+    {
+        "nhood_no": 120,
+        "neighborhoodenglish": "Failaka Island",
+        "centroid_x": 48.333631,
+        "centroid_y": 29.433949
+    },
+    {
+        "nhood_no": 220,
+        "neighborhoodenglish": "Farwaniya,Qannas Saud Al Nemran  Complex Habib Mnawer Street",
+        "centroid_x": 47.959202,
+        "centroid_y": 29.277764
+    },
+    {
+        "nhood_no": 227,
+        "neighborhoodenglish": "Ferdous",
+        "centroid_x": 47.874448,
+        "centroid_y": 29.284074
+    },
+    {
+        "nhood_no": 119,
+        "neighborhoodenglish": "Ghornata",
+        "centroid_x": 47.872757,
+        "centroid_y": 29.316525
+    },
+    {
+        "nhood_no": 303,
+        "neighborhoodenglish": "Hadiya",
+        "centroid_x": 48.091638,
+        "centroid_y": 29.145162
+    },
+    {
+        "nhood_no": 204,
+        "neighborhoodenglish": "Hawalli,Hawally,Al andalus mall,Al Othman Commercial Complex,Promenade mall",
+        "centroid_x": 48.019352,
+        "centroid_y": 29.336376
+    },
+    {
+        "nhood_no": 235,
+        "neighborhoodenglish": "Hitteen,Hitten",
+        "centroid_x": 48.019908,
+        "centroid_y": 29.283879
+    },
+    {
+        "nhood_no": 446,
+        "neighborhoodenglish": "Jaber Al-Ahmad,Jabir Al Ahmad,Jaber Al Ahmad",
+        "centroid_x": 47.765564,
+        "centroid_y": 29.339652
+    },
+    {
+        "nhood_no": 340,
+        "neighborhoodenglish": "Jaber Al-Ali,53GP+XCP",
+        "centroid_x": 48.082769,
+        "centroid_y": 29.168816
+    },
+    {
+        "nhood_no": 217,
+        "neighborhoodenglish": "Jabriya",
+        "centroid_x": 48.032722,
+        "centroid_y": 29.318561
+    },
+    {
+        "nhood_no": 403,
+        "neighborhoodenglish": "Jahra,Ain Jalut Sտ Block 2",
+        "centroid_x": 47.67272,
+        "centroid_y": 29.348215
+    },
+    {
+        "nhood_no": 428,
+        "neighborhoodenglish": "Jahra Camps",
+        "centroid_x": 47.709025,
+        "centroid_y": 29.352681
+    },
+    {
+        "nhood_no": 431,
+        "neighborhoodenglish": "Jahra Industrial Herafiya 1",
+        "centroid_x": 47.653229,
+        "centroid_y": 29.321037
+    },
+    {
+        "nhood_no": 432,
+        "neighborhoodenglish": "Janobyia Aljawakheer",
+        "centroid_x": 47.933101,
+        "centroid_y": 28.708565
+    },
+    {
+        "nhood_no": 441,
+        "neighborhoodenglish": "Jawakher Al Jahra",
+        "centroid_x": 47.659683,
+        "centroid_y": 29.306359
+    },
+    {
+        "nhood_no": 228,
+        "neighborhoodenglish": "Jleeb Al-Shiyoukh,Jeleeb,jaleeb,138 138 St,Jleeb Al-Shyoukh,Jleeb Al-Shyoukh",
+        "centroid_x": 47.934377,
+        "centroid_y": 29.257112
+    },
+    {
+        "nhood_no": 417,
+        "neighborhoodenglish": "Kabd",
+        "centroid_x": 47.730764,
+        "centroid_y": 29.104798
+    },
+    {
+        "nhood_no": 440,
+        "neighborhoodenglish": "Kaerawan",
+        "centroid_x": 47.79847,
+        "centroid_y": 29.302644
+    },
+    {
+        "nhood_no": 413,
+        "neighborhoodenglish": "Kazima",
+        "centroid_x": 47.76903,
+        "centroid_y": 29.511658
+    },
+    {
+        "nhood_no": 252,
+        "neighborhoodenglish": "Khaitan",
+        "centroid_x": 47.975791,
+        "centroid_y": 29.28439
+    },
+    {
+        "nhood_no": 201,
+        "neighborhoodenglish": "Khaldiya",
+        "centroid_x": 47.964402,
+        "centroid_y": 29.325678
+    },
+    {
+        "nhood_no": 359,
+        "neighborhoodenglish": "Khiran City",
+        "centroid_x": 48.281212,
+        "centroid_y": 28.664435
+    },
+    {
+        "nhood_no": 116,
+        "neighborhoodenglish": "Kifan,Kaifan",
+        "centroid_x": 47.960193,
+        "centroid_y": 29.339494
+    },
+    {
+        "nhood_no": 125,
+        "neighborhoodenglish": "Kubbar Island",
+        "centroid_x": 48.492313,
+        "centroid_y": 29.07119
+    },
+    {
+        "nhood_no": 474,
+        "neighborhoodenglish": "Low costs",
+        "centroid_x": 47.535547,
+        "centroid_y": 29.269541
+    },
+    {
+        "nhood_no": 322,
+        "neighborhoodenglish": "Magwa",
+        "centroid_x": 48.045611,
+        "centroid_y": 29.143305
+    },
+    {
+        "nhood_no": 306,
+        "neighborhoodenglish": "Mahboula",
+        "centroid_x": 48.121067,
+        "centroid_y": 29.147886
+    },
+    {
+        "nhood_no": 308,
+        "neighborhoodenglish": "Mangaf",
+        "centroid_x": 48.12791,
+        "centroid_y": 29.105353
+    },
+    {
+        "nhood_no": 106,
+        "neighborhoodenglish": "Mansouriya,9X3V+WCH",
+        "centroid_x": 47.994621,
+        "centroid_y": 29.357817
+    },
+    {
+        "nhood_no": 332,
+        "neighborhoodenglish": "Middle of Ahmadi",
+        "centroid_x": 48.072922,
+        "centroid_y": 29.089841
+    },
+    {
+        "nhood_no": 320,
+        "neighborhoodenglish": "Mina Abdulla",
+        "centroid_x": 48.092404,
+        "centroid_y": 28.977753
+    },
+    {
+        "nhood_no": 453,
+        "neighborhoodenglish": "Mina Abdullah Refinery",
+        "centroid_x": 48.149226,
+        "centroid_y": 29.00549
+    },
+    {
+        "nhood_no": 454,
+        "neighborhoodenglish": "Mina Al-Ahmadi Refinery",
+        "centroid_x": 48.122502,
+        "centroid_y": 29.05507
+    },
+    {
+        "nhood_no": 426,
+        "neighborhoodenglish": "Mina Doha",
+        "centroid_x": 47.803663,
+        "centroid_y": 29.359744
+    },
+    {
+        "nhood_no": 229,
+        "neighborhoodenglish": "Ministries Area",
+        "centroid_x": 48.017345,
+        "centroid_y": 29.271265
+    },
+    {
+        "nhood_no": 103,
+        "neighborhoodenglish": "Mirqab",
+        "centroid_x": 47.98431,
+        "centroid_y": 29.368101
+    },
+    {
+        "nhood_no": 123,
+        "neighborhoodenglish": "Mischan Island",
+        "centroid_x": 48.251381,
+        "centroid_y": 29.485568
+    },
+    {
+        "nhood_no": 209,
+        "neighborhoodenglish": "Mishrif,Mishref,Meshrif",
+        "centroid_x": 48.067114,
+        "centroid_y": 29.276913
+    },
+    {
+        "nhood_no": 436,
+        "neighborhoodenglish": "Mubarak Al-Abdullah",
+        "centroid_x": 48.046862,
+        "centroid_y": 29.273964
+    },
+    {
+        "nhood_no": 251,
+        "neighborhoodenglish": "Mubarak Al-Kabeer,Mubarak Al Kabeer,Mubarak Alkabeer",
+        "centroid_x": 48.082369,
+        "centroid_y": 29.187796
+    },
+    {
+        "nhood_no": 117,
+        "neighborhoodenglish": "Mubarakiya Camps",
+        "centroid_x": 47.908902,
+        "centroid_y": 29.31502
+    },
+    {
+        "nhood_no": 253,
+        "neighborhoodenglish": "Mubarakyia",
+        "centroid_x": 48.038911,
+        "centroid_y": 29.284683
+    },
+    {
+        "nhood_no": 448,
+        "neighborhoodenglish": "Naayem Industrial",
+        "centroid_x": 47.275254,
+        "centroid_y": 29.227462
+    },
+    {
+        "nhood_no": 405,
+        "neighborhoodenglish": "Naeem",
+        "centroid_x": 47.695005,
+        "centroid_y": 29.332943
+    },
+    {
+        "nhood_no": 435,
+        "neighborhoodenglish": "Nahda",
+        "centroid_x": 47.859239,
+        "centroid_y": 29.303094
+    },
+    {
+        "nhood_no": 429,
+        "neighborhoodenglish": "Nasseem",
+        "centroid_x": 47.677677,
+        "centroid_y": 29.31917
+    },
+    {
+        "nhood_no": 333,
+        "neighborhoodenglish": "North Ahmadi",
+        "centroid_x": 48.066661,
+        "centroid_y": 29.102787
+    },
+    {
+        "nhood_no": 444,
+        "neighborhoodenglish": "North West Jahra",
+        "centroid_x": 47.649649,
+        "centroid_y": 29.354811
+    },
+    {
+        "nhood_no": 134,
+        "neighborhoodenglish": "Northwest Sulaibikhat",
+        "centroid_x": 47.811957,
+        "centroid_y": 29.327004
+    },
+    {
+        "nhood_no": 114,
+        "neighborhoodenglish": "Nuzha",
+        "centroid_x": 47.991471,
+        "centroid_y": 29.342493
+    },
+    {
+        "nhood_no": 222,
+        "neighborhoodenglish": "Omariya",
+        "centroid_x": 47.955773,
+        "centroid_y": 29.295965
+    },
+    {
+        "nhood_no": 427,
+        "neighborhoodenglish": "Oyoun,Oyoon",
+        "centroid_x": 47.65591,
+        "centroid_y": 29.329566
+    },
+    {
+        "nhood_no": 111,
+        "neighborhoodenglish": "Qadsiya",
+        "centroid_x": 48.003259,
+        "centroid_y": 29.348926
+    },
+    {
+        "nhood_no": 126,
+        "neighborhoodenglish": "Qaruh Island",
+        "centroid_x": 48.77643,
+        "centroid_y": 28.817631
+    },
+    {
+        "nhood_no": 404,
+        "neighborhoodenglish": "Qasr",
+        "centroid_x": 47.693584,
+        "centroid_y": 29.341869
+    },
+    {
+        "nhood_no": 105,
+        "neighborhoodenglish": "Qibla",
+        "centroid_x": 47.969941,
+        "centroid_y": 29.369064
+    },
+    {
+        "nhood_no": 215,
+        "neighborhoodenglish": "Qortuba,16 4 St. 1 Ln,8X7P+53Q,Qurtoba",
+        "centroid_x": 47.98682,
+        "centroid_y": 29.312016
+    },
+    {
+        "nhood_no": 223,
+        "neighborhoodenglish": "Rabiya",
+        "centroid_x": 47.937397,
+        "centroid_y": 29.294883
+    },
+    {
+        "nhood_no": 221,
+        "neighborhoodenglish": "Rai,1617 8 St",
+        "centroid_x": 47.944939,
+        "centroid_y": 29.308385
+    },
+    {
+        "nhood_no": 350,
+        "neighborhoodenglish": "Rajim Khashman",
+        "centroid_x": 47.833021,
+        "centroid_y": 29.159994
+    },
+    {
+        "nhood_no": 203,
+        "neighborhoodenglish": "Rawda",
+        "centroid_x": 47.998944,
+        "centroid_y": 29.329362
+    },
+    {
+        "nhood_no": 414,
+        "neighborhoodenglish": "Rawdatain",
+        "centroid_x": 47.863471,
+        "centroid_y": 29.79561
+    },
+    {
+        "nhood_no": 247,
+        "neighborhoodenglish": "Rehab",
+        "centroid_x": 47.938503,
+        "centroid_y": 29.284333
+    },
+    {
+        "nhood_no": 224,
+        "neighborhoodenglish": "Riggai",
+        "centroid_x": 47.916827,
+        "centroid_y": 29.30506
+    },
+    {
+        "nhood_no": 302,
+        "neighborhoodenglish": "Riqqa,Rigai",
+        "centroid_x": 48.1054,
+        "centroid_y": 29.148133
+    },
+    {
+        "nhood_no": 208,
+        "neighborhoodenglish": "Rumaithiya",
+        "centroid_x": 48.071965,
+        "centroid_y": 29.316002
+    },
+    {
+        "nhood_no": 437,
+        "neighborhoodenglish": "Saad Al-Abdulla, Saad Abdullah, KNPC drive-up, 131 شارع 868",
+        "centroid_x": 47.715446,
+        "centroid_y": 29.310782
+    },
+    {
+        "nhood_no": 457,
+        "neighborhoodenglish": "Sabah Al Salem University",
+        "centroid_x": 47.897935,
+        "centroid_y": 29.257243
+    },
+    {
+        "nhood_no": 352,
+        "neighborhoodenglish": "Sabah Al-Ahmad 1,Sabah Al Ahmad,Sabah Al Ahmed",
+        "centroid_x": 48.062797,
+        "centroid_y": 28.801957
+    },
+    {
+        "nhood_no": 353,
+        "neighborhoodenglish": "Sabah Al-Ahmad 2,Sabah Al Ahmad,Sabah Al Ahmed",
+        "centroid_x": 48.051988,
+        "centroid_y": 28.792814
+    },
+    {
+        "nhood_no": 354,
+        "neighborhoodenglish": "Sabah Al-Ahmad 3,Sabah Al Ahmad,Sabah Al Ahmed",
+        "centroid_x": 48.037306,
+        "centroid_y": 28.778628
+    },
+    {
+        "nhood_no": 355,
+        "neighborhoodenglish": "Sabah Al-Ahmad 4,Sabah Al Ahmad,Sabah Al Ahmed",
+        "centroid_x": 48.068256,
+        "centroid_y": 28.767805
+    },
+    {
+        "nhood_no": 356,
+        "neighborhoodenglish": "Sabah Al-Ahmad 5,Sabah Al Ahmad,Sabah Al Ahmed",
+        "centroid_x": 48.084448,
+        "centroid_y": 28.782541
+    },
+    {
+        "nhood_no": 458,
+        "neighborhoodenglish": "Sabah Al-Ahmad 6,Sabah Al Ahmad,Sabah Al Ahmed",
+        "centroid_x": 48.058843,
+        "centroid_y": 28.760773
+    },
+    {
+        "nhood_no": 351,
+        "neighborhoodenglish": "Sabah Al-Ahmad Al-marine",
+        "centroid_x": 48.346797,
+        "centroid_y": 28.655339
+    },
+    {
+        "nhood_no": 358,
+        "neighborhoodenglish": "Sabah Al-Ahmad Investment",
+        "centroid_x": 48.056868,
+        "centroid_y": 28.752039
+    },
+    {
+        "nhood_no": 357,
+        "neighborhoodenglish": "Sabah Al-Ahmad Services",
+        "centroid_x": 48.068961,
+        "centroid_y": 28.790082
+    },
+    {
+        "nhood_no": 241,
+        "neighborhoodenglish": "Sabah Al-Nasser",
+        "centroid_x": 47.887239,
+        "centroid_y": 29.271543
+    },
+    {
+        "nhood_no": 212,
+        "neighborhoodenglish": "Sabah Al-Salem,Sabah Al Salem, Sabah Al-Salim",
+        "centroid_x": 48.066734,
+        "centroid_y": 29.254224
+    },
+    {
+        "nhood_no": 309,
+        "neighborhoodenglish": "Sabahiya",
+        "centroid_x": 48.106428,
+        "centroid_y": 29.107249
+    },
+    {
+        "nhood_no": 237,
+        "neighborhoodenglish": "Salam,8233+764",
+        "centroid_x": 48.01441,
+        "centroid_y": 29.297394
+    },
+    {
+        "nhood_no": 416,
+        "neighborhoodenglish": "Salmy",
+        "centroid_x": 46.767832,
+        "centroid_y": 29.175594
+    },
+    {
+        "nhood_no": 210,
+        "neighborhoodenglish": "Salwa",
+        "centroid_x": 48.07911,
+        "centroid_y": 29.29397
+    },
+    {
+        "nhood_no": 900,
+        "neighborhoodenglish": "Sayhad Al Awazim",
+        "centroid_x": 47.91789,
+        "centroid_y": 29.203794
+    },
+    {
+        "nhood_no": 205,
+        "neighborhoodenglish": "Shaab",
+        "centroid_x": 48.026806,
+        "centroid_y": 29.35057
+    },
+    {
+        "nhood_no": 493,
+        "neighborhoodenglish": "Shadadiya",
+        "centroid_x": 47.854307,
+        "centroid_y": 29.207881
+    },
+    {
+        "nhood_no": 318,
+        "neighborhoodenglish": "Shalehat Al-Khiran",
+        "centroid_x": 48.384967,
+        "centroid_y": 28.628893
+    },
+    {
+        "nhood_no": 317,
+        "neighborhoodenglish": "Shalehat Al-Nuwaiseeb",
+        "centroid_x": 48.408945,
+        "centroid_y": 28.561657
+    },
+    {
+        "nhood_no": 344,
+        "neighborhoodenglish": "Shalehat Bneder",
+        "centroid_x": 48.275806,
+        "centroid_y": 28.817092
+    },
+    {
+        "nhood_no": 346,
+        "neighborhoodenglish": "Shalehat Dba'ayeh",
+        "centroid_x": 48.207213,
+        "centroid_y": 28.921143
+    },
+    {
+        "nhood_no": 345,
+        "neighborhoodenglish": "Shalehat Doha",
+        "centroid_x": 47.761447,
+        "centroid_y": 29.370994
+    },
+    {
+        "nhood_no": 343,
+        "neighborhoodenglish": "Shalehat Jlea'a",
+        "centroid_x": 48.262942,
+        "centroid_y": 28.883576
+    },
+    {
+        "nhood_no": 347,
+        "neighborhoodenglish": "Shalehat Kazima",
+        "centroid_x": 47.837984,
+        "centroid_y": 29.488271
+    },
+    {
+        "nhood_no": 349,
+        "neighborhoodenglish": "Shalehat Mina Abdullah",
+        "centroid_x": 48.172597,
+        "centroid_y": 28.967703
+    },
+    {
+        "nhood_no": 348,
+        "neighborhoodenglish": "Shalehat Subiya",
+        "centroid_x": 48.126002,
+        "centroid_y": 29.66235
+    },
+    {
+        "nhood_no": 342,
+        "neighborhoodenglish": "Shalehat Zoor",
+        "centroid_x": 48.385534,
+        "centroid_y": 28.672741
+    },
+    {
+        "nhood_no": 109,
+        "neighborhoodenglish": "Shamiya",
+        "centroid_x": 47.966614,
+        "centroid_y": 29.351524
+    },
+    {
+        "nhood_no": 434,
+        "neighborhoodenglish": "Shuaiba Industrial Western",
+        "centroid_x": 48.11545,
+        "centroid_y": 29.003599
+    },
+    {
+        "nhood_no": 311,
+        "neighborhoodenglish": "Shuaiba Industrial esterly",
+        "centroid_x": 48.139875,
+        "centroid_y": 29.034238
+    },
+    {
+        "nhood_no": 230,
+        "neighborhoodenglish": "Shuhada",
+        "centroid_x": 48.030944,
+        "centroid_y": 29.270999
+    },
+    {
+        "nhood_no": 115,
+        "neighborhoodenglish": "Shuwaikh,9X24+WPP",
+        "centroid_x": 47.951763,
+        "centroid_y": 29.352967
+    },
+    {
+        "nhood_no": 494,
+        "neighborhoodenglish": "Shuwaikh Educational",
+        "centroid_x": 47.915799,
+        "centroid_y": 29.336081
+    },
+    {
+        "nhood_no": 129,
+        "neighborhoodenglish": "Shuwaikh Industrial-1,Shuwaikh Industrial",
+        "centroid_x": 47.938523,
+        "centroid_y": 29.338033
+    },
+    {
+        "nhood_no": 118,
+        "neighborhoodenglish": "Shuwaikh Industrial-2,Shuwaikh Industrial",
+        "centroid_x": 47.948952,
+        "centroid_y": 29.322746
+    },
+    {
+        "nhood_no": 130,
+        "neighborhoodenglish": "Shuwaikh Industrial-3,Shuwaikh Industrial",
+        "centroid_x": 47.930664,
+        "centroid_y": 29.321513
+    },
+    {
+        "nhood_no": 133,
+        "neighborhoodenglish": "Shuwaikh Port",
+        "centroid_x": 47.918898,
+        "centroid_y": 29.352021
+    },
+    {
+        "nhood_no": 131,
+        "neighborhoodenglish": "Shuwaikh Sanitary",
+        "centroid_x": 47.895053,
+        "centroid_y": 29.323324
+    },
+    {
+        "nhood_no": 460,
+        "neighborhoodenglish": "South Abdullah Al-Mubarak",
+        "centroid_x": 47.894755,
+        "centroid_y": 29.211126
+    },
+    {
+        "nhood_no": 330,
+        "neighborhoodenglish": "South Ahmadi",
+        "centroid_x": 48.067079,
+        "centroid_y": 29.080165
+    },
+    {
+        "nhood_no": 456,
+        "neighborhoodenglish": "South Amghara",
+        "centroid_x": 47.725475,
+        "centroid_y": 29.278796
+    },
+    {
+        "nhood_no": 473,
+        "neighborhoodenglish": "South Khitan Shows",
+        "centroid_x": 47.97934,
+        "centroid_y": 29.263165
+    },
+    {
+        "nhood_no": 486,
+        "neighborhoodenglish": "South Saad Al-Abdulla 1",
+        "centroid_x": 47.692851,
+        "centroid_y": 29.290608
+    },
+    {
+        "nhood_no": 487,
+        "neighborhoodenglish": "South Saad Al-Abdulla 2",
+        "centroid_x": 47.677932,
+        "centroid_y": 29.277633
+    },
+    {
+        "nhood_no": 488,
+        "neighborhoodenglish": "South Saad Al-Abdulla 3",
+        "centroid_x": 47.690044,
+        "centroid_y": 29.252749
+    },
+    {
+        "nhood_no": 489,
+        "neighborhoodenglish": "South Saad Al-Abdulla 4",
+        "centroid_x": 47.687392,
+        "centroid_y": 29.212516
+    },
+    {
+        "nhood_no": 490,
+        "neighborhoodenglish": "South Saad Al-Abdulla 5",
+        "centroid_x": 47.65206,
+        "centroid_y": 29.225669
+    },
+    {
+        "nhood_no": 491,
+        "neighborhoodenglish": "South Saad Al-Abdulla 6",
+        "centroid_x": 47.67735,
+        "centroid_y": 29.238987
+    },
+    {
+        "nhood_no": 902,
+        "neighborhoodenglish": "South Subah AlAhamd",
+        "centroid_x": 48.09754,
+        "centroid_y": 28.744929
+    },
+    {
+        "nhood_no": 475,
+        "neighborhoodenglish": "South Subah AlAhamd 1",
+        "centroid_x": 48.125419,
+        "centroid_y": 28.747304
+    },
+    {
+        "nhood_no": 484,
+        "neighborhoodenglish": "South Subah AlAhamd 10",
+        "centroid_x": 48.175624,
+        "centroid_y": 28.698965
+    },
+    {
+        "nhood_no": 485,
+        "neighborhoodenglish": "South Subah AlAhamd 11",
+        "centroid_x": 48.091804,
+        "centroid_y": 28.747586
+    },
+    {
+        "nhood_no": 476,
+        "neighborhoodenglish": "South Subah AlAhamd 2",
+        "centroid_x": 48.144884,
+        "centroid_y": 28.755501
+    },
+    {
+        "nhood_no": 477,
+        "neighborhoodenglish": "South Subah AlAhamd 3",
+        "centroid_x": 48.121878,
+        "centroid_y": 28.733879
+    },
+    {
+        "nhood_no": 478,
+        "neighborhoodenglish": "South Subah AlAhamd 4",
+        "centroid_x": 48.158681,
+        "centroid_y": 28.749258
+    },
+    {
+        "nhood_no": 479,
+        "neighborhoodenglish": "South Subah AlAhamd 5",
+        "centroid_x": 48.135273,
+        "centroid_y": 28.716488
+    },
+    {
+        "nhood_no": 480,
+        "neighborhoodenglish": "South Subah AlAhamd 6",
+        "centroid_x": 48.165757,
+        "centroid_y": 28.729683
+    },
+    {
+        "nhood_no": 481,
+        "neighborhoodenglish": "South Subah AlAhamd 7",
+        "centroid_x": 48.142916,
+        "centroid_y": 28.696697
+    },
+    {
+        "nhood_no": 482,
+        "neighborhoodenglish": "South Subah AlAhamd 8",
+        "centroid_x": 48.178905,
+        "centroid_y": 28.712284
+    },
+    {
+        "nhood_no": 483,
+        "neighborhoodenglish": "South Subah AlAhamd 9",
+        "centroid_x": 48.156681,
+        "centroid_y": 28.690784
+    },
+    {
+        "nhood_no": 913,
+        "neighborhoodenglish": "South Subah AlAhamd Services",
+        "centroid_x": 48.150506,
+        "centroid_y": 28.723153
+    },
+    {
+        "nhood_no": 338,
+        "neighborhoodenglish": "South-Sabahiya,South Sabahiya,Warehouse Mall",
+        "centroid_x": 48.10598,
+        "centroid_y": 29.078445
+    },
+    {
+        "nhood_no": 232,
+        "neighborhoodenglish": "Subhan Industrial,Subhan",
+        "centroid_x": 48.003834,
+        "centroid_y": 29.23164
+    },
+    {
+        "nhood_no": 422,
+        "neighborhoodenglish": "Subiya",
+        "centroid_x": 48.045574,
+        "centroid_y": 29.679469
+    },
+    {
+        "nhood_no": 402,
+        "neighborhoodenglish": "Sulaibikhat",
+        "centroid_x": 47.844675,
+        "centroid_y": 29.31597
+    },
+    {
+        "nhood_no": 455,
+        "neighborhoodenglish": "Sulaibikhat Cemetery",
+        "centroid_x": 47.831114,
+        "centroid_y": 29.303897
+    },
+    {
+        "nhood_no": 424,
+        "neighborhoodenglish": "Sulaibiya Agricultural",
+        "centroid_x": 47.769891,
+        "centroid_y": 29.240525
+    },
+    {
+        "nhood_no": 408,
+        "neighborhoodenglish": "Sulaibiya Industrial 1",
+        "centroid_x": 47.840328,
+        "centroid_y": 29.288565
+    },
+    {
+        "nhood_no": 423,
+        "neighborhoodenglish": "Sulaibiya Industrial 2",
+        "centroid_x": 47.853375,
+        "centroid_y": 29.278377
+    },
+    {
+        "nhood_no": 407,
+        "neighborhoodenglish": "Sulaibiya Residential",
+        "centroid_x": 47.825259,
+        "centroid_y": 29.285203
+    },
+    {
+        "nhood_no": 433,
+        "neighborhoodenglish": "Sulaibyia Industrial 3",
+        "centroid_x": 47.829892,
+        "centroid_y": 29.209164
+    },
+    {
+        "nhood_no": 216,
+        "neighborhoodenglish": "Surra,Hamad yousif bin hussain al roomi st",
+        "centroid_x": 48.007389,
+        "centroid_y": 29.313772
+    },
+    {
+        "nhood_no": 419,
+        "neighborhoodenglish": "Taima",
+        "centroid_x": 47.681615,
+        "centroid_y": 29.32869
+    },
+    {
+        "nhood_no": 132,
+        "neighborhoodenglish": "The Sea Front",
+        "centroid_x": 47.990172,
+        "centroid_y": 29.380055
+    },
+    {
+        "nhood_no": 415,
+        "neighborhoodenglish": "Umm Al-Aish",
+        "centroid_x": 47.75947,
+        "centroid_y": 29.682812
+    },
+    {
+        "nhood_no": 127,
+        "neighborhoodenglish": "Umm Al-Maradim Island",
+        "centroid_x": 48.651194,
+        "centroid_y": 28.680317
+    },
+    {
+        "nhood_no": 128,
+        "neighborhoodenglish": "Umm Al-Namel Island",
+        "centroid_x": 47.864593,
+        "centroid_y": 29.381623
+    },
+    {
+        "nhood_no": 909,
+        "neighborhoodenglish": "Umm Hegoul",
+        "centroid_x": 47.791754,
+        "centroid_y": 28.610631
+    },
+    {
+        "nhood_no": 315,
+        "neighborhoodenglish": "Wafra",
+        "centroid_x": 47.937795,
+        "centroid_y": 28.609006
+    },
+    {
+        "nhood_no": 337,
+        "neighborhoodenglish": "Wafra Farms",
+        "centroid_x": 48.136762,
+        "centroid_y": 28.587579
+    },
+    {
+        "nhood_no": 319,
+        "neighborhoodenglish": "Wafra Residential",
+        "centroid_x": 48.021618,
+        "centroid_y": 28.606203
+    },
+    {
+        "nhood_no": 420,
+        "neighborhoodenglish": "Waha",
+        "centroid_x": 47.658514,
+        "centroid_y": 29.342066
+    },
+    {
+        "nhood_no": 121,
+        "neighborhoodenglish": "Warba Island",
+        "centroid_x": 48.074405,
+        "centroid_y": 29.992486
+    },
+    {
+        "nhood_no": 331,
+        "neighborhoodenglish": "West  Ahmadi",
+        "centroid_x": 48.059068,
+        "centroid_y": 29.076628
+    },
+    {
+        "nhood_no": 450,
+        "neighborhoodenglish": "West Abdullah Al-Mubarak",
+        "centroid_x": 47.854501,
+        "centroid_y": 29.238032
+    },
+    {
+        "nhood_no": 443,
+        "neighborhoodenglish": "West Abu Ftirah Hirafyia,West Abu Fatira,Aswaq Al-Qurain,Aswaq Al-Qurian,west abo fatira,622W+4J4,West Abu Ftirah Hiraffyia,52WW+XPJ,52XX+2VJ,aswaq",
+        "centroid_x": 48.050664,
+        "centroid_y": 29.198166
+    },
+    {
+        "nhood_no": 245,
+        "neighborhoodenglish": "Wista",
+        "centroid_x": 48.028842,
+        "centroid_y": 29.219117
+    },
+    {
+        "nhood_no": 214,
+        "neighborhoodenglish": "Yarmouk",
+        "centroid_x": 47.969629,
+        "centroid_y": 29.310477
+    },
+    {
+        "nhood_no": 234,
+        "neighborhoodenglish": "Zahra,360 Mall",
+        "centroid_x": 47.999628,
+        "centroid_y": 29.275096
+    },
+    {
+        "nhood_no": 325,
+        "neighborhoodenglish": "Zoor",
+        "centroid_x": 48.3373,
+        "centroid_y": 28.720399
+    },
+    {
+        "nhood_no": 447,
+        "neighborhoodenglish": "kabd Agricultural",
+        "centroid_x": 47.799167,
+        "centroid_y": 29.057864
+    }
+]
