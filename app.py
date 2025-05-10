@@ -18,7 +18,6 @@ CORS(app)
 
 MY_API_KEY = os.environ.get("MY_API_KEY")
 FM_TOKEN = os.environ.get("FM_TOKEN")
-VERDI_URL = os.environ.get("VERDI_URL")
 VERDI_API_KEY = os.environ.get("VERDI_API_KEY")
 API_URL = "https://api.tookanapp.com/v2/get_fare_estimate"
 
@@ -87,145 +86,6 @@ def send_email(excel_file, subject, clientName):
         print(f"Error sending email: {str(e)}")
 
 
-
-
-#!------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#*---------------------------------------------FARE from 1 BRANCH to ALL AREAS of Kuwait----------------------------------------------------------------------------
-
-
-def getFareData(pickup_lat, pickup_lng, template):
-
-    # Load the JSON file
-    with open('AreasWithBlocks.json', 'r') as file:
-        areas = json.load(file)
-
-    results = []
-
-    for area in areas:
-        nhood_name = area['area_name']
-        delivery_longitude = str(area['lng'])
-        delivery_latitude = str(area['lat'])
-        block_number = str(area["name_en"])
-
-        # Prepare API request data
-        data = {
-            "template_name": template,
-            "pickup_longitude": pickup_lng,
-            "pickup_latitude": pickup_lat,
-            "api_key": MY_API_KEY,
-            "delivery_latitude": delivery_latitude,
-            "delivery_longitude": delivery_longitude,
-            "formula_type": 2,
-            "map_keys": {
-                "fm_token": FM_TOKEN
-            },
-            "map_type": 0
-        }
-
-        # Convert the dictionary to a JSON-formatted byte string
-        json_data = json.dumps(data).encode('utf-8')
-
-        headers = {
-            'Content-Type': 'application/json'
-        }
-
-        try:
-            # Make the API request
-            request = Request(API_URL, data=json_data, headers=headers)
-            response_body = urlopen(request).read()
-            response_json = json.loads(response_body.decode('utf-8'))
-
-            # Check if the response is successful
-            if response_json.get('status') == 200:
-                estimated_fare = response_json['data']['estimated_fare']
-                distance = response_json['data']['distance']
-                # Append results
-                results.append({
-                    'Area': nhood_name,
-                    'Block': block_number,
-                    'Estimated Fare': estimated_fare,
-                    'Distance (meters)': distance
-                })
-                print(f"Processed {nhood_name}: Fare = {estimated_fare}, Distance = {distance} meters")
-            else:
-                print(f"Error for {nhood_name}: {response_json.get('message')}")
-                results.append({
-                    'Area': nhood_name,
-                    'Block': block_number,
-                    'Estimated Fare': None,
-                    'Distance (meters)': None
-                })
-
-        except Exception as e:
-            print(f"Exception for {nhood_name}: {str(e)}")
-            results.append({
-                'Areas': nhood_name,
-                'Estimated Fare': None,
-                'Distance (meters)': None
-            })
-
-        # Add a 5-second delay between API calls
-        # time.sleep(5)
-
-    return results
-
-def sendEmail(results, clientName):
-    try:
-        # Convert results to a pandas DataFrame
-        df = pd.DataFrame(results)
-        
-        # Save DataFrame to Excel
-        excel_file = f"{clientName} fare estimate.xlsx"
-        df.to_excel(excel_file, index=False)
-        
-        # Read the file and encode in base64
-        with open(excel_file, "rb") as f:
-            excel_data = f.read()
-            encoded_excel = base64.b64encode(excel_data).decode()
-
-        # Send email using Postmark
-        client = PostmarkClient(server_token=POSTMARK_TOKEN)
-        client.emails.send(
-            From=senderEmail,
-            To=recipientEmail,
-            Subject="Area wise fare estimate",
-            HtmlBody="<strong>Please find the attached Excel file.</strong>",
-            Attachments=[
-                {
-                    "Name": f"{clientName} fare estimate.xlsx",
-                    "Content": encoded_excel,
-                    "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                }
-            ]
-        )
-
-    except Exception as e:
-        print(f"Error sending email: {str(e)}")
-
-def fareAndEmail(pickup_lat, pickup_lng, template, clientName):
-    results = getFareData(pickup_lat, pickup_lng, template)
-    sendEmail(results, clientName)
-
-
-# TODO: Endpoint for getting fares from the branch to all areas of Kuwait
-@app.route('/get_all_fare', methods=['POST'])
-def get_all_fare():
-    data = request.get_json()
-
-    pickup_lat = data.get('pickup_lat')
-    pickup_lng = data.get('pickup_lng')
-    template = data.get('template')
-    clientName = data.get('clientName')
-
-    # Start the heavy work in a new thread
-    thread = threading.Thread(target=fareAndEmail, args=(pickup_lat, pickup_lng, template, clientName))
-    thread.start()
-
-    return jsonify({
-        "message": "Yooooo congrats bro your micro service is actually working 😂"
-    })
-
-
 # !-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #* ---------------------------------------------------DATA ANALYSIS ENDPOINT----------------------------------------------------------------------------------------
 
@@ -244,7 +104,7 @@ def data_analysis():
     thread.start()
 
     return jsonify({
-        "message": "Yooooo congrats bro your micro service is actually working 😂"
+        "message": "You will receive the report in your email inbox in less than a minute!"
     })
 
 
