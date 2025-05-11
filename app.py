@@ -287,7 +287,7 @@ def get_Amount_Ranges(data, clientName):
         (3, 3.5),
         (3.5, float('inf'))
     ]
-    range_labels = [f"{lo}-{hi if hi != float('inf') else '+'}" for lo, hi in range_limits]
+    range_labels = [f"{lo} - {hi if hi != float('inf') else '+'}" for lo, hi in range_limits]
 
     # Prepare data storage
     user_range_counts = defaultdict(lambda: defaultdict(int))
