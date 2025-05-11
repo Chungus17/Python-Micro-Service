@@ -273,13 +273,21 @@ def get_Total_Fare(data, clientName):
     send_email(output_filename, subject="Total Fare", clientName=clientName)
 
 def get_Amount_Ranges(data, clientName):
-
     output_file_name = "Orders in fare ranges.xlsx"
 
-    # Define range intervals
-    step = 0.25
-    range_limits = [(round(start, 2), round(start + step, 2)) for start in [1 + i * step for i in range(8)]]  
-    range_labels = [f"{lo}-{hi}" for lo, hi in range_limits]
+    # Define custom range intervals (lower bound, upper bound)
+    range_limits = [
+        (0, 1),
+        (1, 1.25),
+        (1.25, 1.5),
+        (1.5, 1.75),
+        (1.75, 2),
+        (2, 2.5),
+        (2.5, 3),
+        (3, 3.5),
+        (3.5, float('inf'))
+    ]
+    range_labels = [f"{lo}-{hi if hi != float('inf') else '+'}" for lo, hi in range_limits]
 
     # Prepare data storage
     user_range_counts = defaultdict(lambda: defaultdict(int))
@@ -288,9 +296,8 @@ def get_Amount_Ranges(data, clientName):
     for record in data:
         user = record['user_name']
         amount = abs(float(record['amount']))
-        for lo, hi in range_limits:
+        for (lo, hi), label in zip(range_limits, range_labels):
             if lo <= amount < hi:
-                label = f"{lo}-{hi}"
                 user_range_counts[user][label] += 1
                 break
 
@@ -304,12 +311,11 @@ def get_Amount_Ranges(data, clientName):
 
     df = pd.DataFrame(output_rows)
     df.to_excel(output_file_name, index=False)
-    # Step 5: Adjust column widths
-    workbook = load_workbook(output_file_name)    
-    sheet = workbook.active
 
-    sheet.column_dimensions[get_column_letter(1)].width = 25  # User_Name
-    # Save the updated workbook
+    # Adjust column widths
+    workbook = load_workbook(output_file_name)
+    sheet = workbook.active
+    sheet.column_dimensions[get_column_letter(1)].width = 25
     workbook.save(output_file_name)
 
     send_email(output_file_name, subject="Total orders in fare ranges", clientName=clientName)
