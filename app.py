@@ -100,6 +100,8 @@ def data_analysis():
     clientName = params_data.get('clientName')
     task_function = params_data.get('task_function')
 
+    print(task_function)
+
     thread = threading.Thread(target=getData, args=(start_date, end_date, filter_by, clientName, task_function))
     thread.start()
 
