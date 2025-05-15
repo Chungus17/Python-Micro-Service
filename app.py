@@ -95,6 +95,7 @@ def send_email(excel_file, subject, clientName):
 def data_analysis():
 
     referer = request.headers.get("Referer", "")
+    print(referer)
     if not referer.startswith(ALLOWED_IP):
         abort(403, description="Access forbidden: Referer not allowed")
 
