@@ -97,6 +97,8 @@ def data_analysis():
     forwarded_for = request.headers.get("X-Forwarded-For", request.remote_addr)
     client_ip = forwarded_for.split(",")[0].strip()
 
+    print(client_ip)
+
     # Check if the request is coming from the allowed IP address
     if client_ip != ALLOWED_IP:
         abort(403, description="Access forbidden: IP not allowed")
