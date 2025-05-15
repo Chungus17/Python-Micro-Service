@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
 import json
 from urllib.request import Request, urlopen
@@ -19,6 +19,7 @@ CORS(app)
 MY_API_KEY = os.environ.get("MY_API_KEY")
 FM_TOKEN = os.environ.get("FM_TOKEN")
 VERDI_API_KEY = os.environ.get("VERDI_API_KEY")
+ALLOWED_IP = os.environ.get("ALLOWED_IP")
 API_URL = "https://api.tookanapp.com/v2/get_fare_estimate"
 
 POSTMARK_TOKEN = os.environ.get("POSTMARK_TOKEN")
@@ -92,6 +93,10 @@ def send_email(excel_file, subject, clientName):
 # TODO: Endpoint for getting NUMBER OF ORDERS PER HOUR (Specific client or all clients)
 @app.route('/data_analysis', methods=["POST"])
 def data_analysis():
+
+    # Check if the request is coming from the allowed IP address
+    if request.remote_addr != ALLOWED_IP:
+        abort(403, description="Access forbidden: IP not allowed")
 
     params_data = request.get_json()
     start_date = params_data.get('start_date')
