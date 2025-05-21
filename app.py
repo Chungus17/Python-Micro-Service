@@ -94,10 +94,10 @@ def send_email(excel_file, subject, clientName):
 @app.route('/data_analysis', methods=["POST"])
 def data_analysis():
 
-    referer = request.headers.get("Referer", "")
-    print(referer)
-    if not referer.startswith(ALLOWED_IP):
-        abort(403, description="Access forbidden: Referer not allowed")
+    # referer = request.headers.get("Referer", "")
+    # print(referer)
+    # if not referer.startswith(ALLOWED_IP):
+    #     abort(403, description="Access forbidden: Referer not allowed")
 
     params_data = request.get_json()
     start_date = params_data.get('start_date')
